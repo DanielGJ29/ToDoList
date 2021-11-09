@@ -1,0 +1,29 @@
+.header{
+    width: 95%;
+    height: 100px;
+    background-color:  #2E86C1 ;
+    margin: auto;
+    text-align: center;
+}
+.header h1{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.header-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.header-container button{
+    width: 130px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 7px;
+    border: none;
+    font-weight: bold;
+}
+.header-container button:hover{
+    background-color: #2E86C1;
+    border: solid 0.5px rgb(0, 0, 0) ;
+    color: white;
+}
