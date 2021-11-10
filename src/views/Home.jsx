@@ -23,13 +23,13 @@ const Home = () => {
          };
      
          const handleCompleted = ()=>{
-
             setTodoListCompleted(true) 
             setTodoListAll(false);
          }
      
          const handleNotCompleted = () =>{
             setTodoListCompleted(false);
+            setTodoListAll(false);
          }
          const handleAll =()=>{
             setTodoListAll(true);
@@ -40,24 +40,17 @@ const Home = () => {
         const handleTodoList = async()=>{
         const response = await fetch ('https://jsonplaceholder.typicode.com/todos');
         const result = await response.json();
-        
         const all = result.slice(0,20);
-        
         setTodoList(all);
-       // setTodoListAll(todoList);
-       console.log(todoList);
-    
         }
         handleTodoList();
     },[]);
-
 
     return (
         <div>
             <Header handleCompleted={handleCompleted} handleNotCompleted={handleNotCompleted} handleAll={handleAll}/>
             <div className="card-container">
 
-            
             {todoListAll ? (
                 todoList.map( single =>               
                 <Todo
